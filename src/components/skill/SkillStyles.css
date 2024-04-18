@@ -1,0 +1,140 @@
+.inner{
+  padding-top: 20px;
+}
+
+.header{
+    text-align: center; 
+    padding: 1rem;
+    position: relative; 
+}
+
+.header:after{
+    content: "";
+    position: absolute;
+    bottom: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: var(--primary-color);;
+    border-radius: 2px;
+} 
+
+.container-r{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+} 
+
+.skill-box{
+    padding: 1rem;
+    /* color: #eee; */
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: (0,0,0,.5); */
+    border-radius: 8px;
+}
+
+.skill-box:hover > .skill-title:after,  .skill-box:hover > .skill-title:before{
+    width: 35px;
+} 
+
+/* .skill-box:hover .img{
+    transform: translateY(-10px);
+}  */
+
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0.5rem;
+    margin-bottom: 0.5rem;  */
+    position: relative; 
+}
+
+.p-cl{
+    color: #777;
+    margin-top: 4px;
+}
+
+/* .skill-title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0px;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ce772;
+    transition: .5s;
+}
+
+ .skill-title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0px;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ce772;
+    transition: .5s;
+}   */
+
+
+/* .img{
+    width: 90px;
+    height: 90px; 
+    position: relative; 
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s; 
+} */
+
+ /* .img::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}  */
+
+ .skill-title h3{
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+ .skill-icon{
+    /* width: 50%;
+    z-index: 2; */
+    width: 90px;
+    height: 90px;
+    /* border-radius: 50%; */
+}   
+
+
+@media screen and (max-width:990px) {
+    .container-r{
+        grid-template-columns: repeat(2,1fr);
+        padding: 2rem 50px;
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .container-r{
+        grid-template-columns: 1fr;
+      
+    }
+}
